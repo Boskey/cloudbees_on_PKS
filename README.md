@@ -17,7 +17,7 @@ nstall Cloudbees Core on PKS ( assumes NSX T Load Balancers are available for se
 		provisioner: kubernetes.io/vsphere-volume
 		parameters:
 		  diskformat: thin
- ```
+		  
  
 	· `Kubectl apply -f pks-storageclass.yaml`
  
