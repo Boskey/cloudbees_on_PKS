@@ -7,7 +7,7 @@ nstall Cloudbees Core on PKS ( assumes NSX T Load Balancers are available for se
 * Ensure you have a storage class created by the name 'default', this storage class will be used by the Persistent Volume claims needed for stateful sets.
  
 	· To add a storage class store the below YAML file as pks-storageclass.yaml
-		```
+	```yaml\
     kind: StorageClass
 		apiVersion: storage.k8s.io/v1
 		metadata:
@@ -18,6 +18,7 @@ nstall Cloudbees Core on PKS ( assumes NSX T Load Balancers are available for se
 		parameters:
 		  diskformat: thin
  ```
+ 
 	· `Kubectl apply -f pks-storageclass.yaml`
  
 2. Download the latest Cloudbees installer for Kubernetes from the below link:
