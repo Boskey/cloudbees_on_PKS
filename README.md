@@ -1,4 +1,4 @@
-# cloudbees_on_PKS
+# Deploying Cloudbees on PKS
 Instructions to get Cloudbees Core deployed on Kubernetes Cluster operated by PKS
 
 nstall Cloudbees Core on PKS ( assumes NSX T Load Balancers are available for service creation)
