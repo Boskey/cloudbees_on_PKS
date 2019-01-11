@@ -21,19 +21,22 @@ nstall Cloudbees Core on PKS ( assumes NSX T Load Balancers are available for se
  
 	· `Kubectl apply -f pks-storageclass.yaml`
  
-2. Download the latest Cloudbees installer for Kubernetes from the below link:
+* Download the latest Cloudbees installer for Kubernetes from the below link:
  
 https://downloads.cloudbees.com/cloudbees-core/cloud/latest/
+
  
  
-3. Untar the file, and follow further instructions to installing cloudbees core as per the link below:
+* Untar the file, and follow further instructions to installing cloudbees core as per the link below:
+
  
      https://go.cloudbees.com/docs/cloudbees-core/cloud-install-guide/kubernetes-install/
-4. If you prefer service type loadbalancer to Ingress, edit the service for the pod ‘cjoc’ and replace service Type from ‘ClusterIp’ to ‘LoadBalancer’
+     
+* If you prefer service type loadbalancer to Ingress, edit the service for the pod ‘cjoc’ and replace service Type from ‘ClusterIp’ to ‘LoadBalancer’
  
 	`kubectl edit service cjoc`
  
-5. Find the external IP address of the ‘cjoc’ service
+* Find the external IP address of the ‘cjoc’ service
 	`external_IP=$(kubectl get svc | grep cjoc | awk '{print $4}')`
  
-6. Access Cloudbees Core Operations Center console by going to `$external_IP/cjoc`
+* Access Cloudbees Core Operations Center console by going to `$external_IP/cjoc`
